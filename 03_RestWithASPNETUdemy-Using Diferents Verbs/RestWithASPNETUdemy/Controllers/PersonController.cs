@@ -20,10 +20,11 @@ namespace RestWithASPNETUdemy.Controllers
         }
 
         [HttpGet("sum/{firstNumber}/{secondNumber}")]
-        public IActionResult Sum(string firstNumber, string secondNumber)
+        public IActionResult Get()
         {
             return BadRequest("Invalid Input");
         }
+
     }
 
 }
