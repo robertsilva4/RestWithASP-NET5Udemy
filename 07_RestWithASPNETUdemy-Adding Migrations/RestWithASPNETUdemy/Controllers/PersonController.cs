@@ -2,10 +2,6 @@
 using Microsoft.Extensions.Logging;
 using RestWithASPNETUdemy.Model;
 using RestWithASPNETUdemy.Business;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestWithASPNETUdemy.Controllers
 {
@@ -42,7 +38,7 @@ namespace RestWithASPNETUdemy.Controllers
         public IActionResult Post([FromBody] Person person)
         {
             if (person == null) return BadRequest();
-            return Ok(_personBusiness.Crete(person));
+            return Ok(_personBusiness.Create(person));
         }
 
         [HttpPut]
