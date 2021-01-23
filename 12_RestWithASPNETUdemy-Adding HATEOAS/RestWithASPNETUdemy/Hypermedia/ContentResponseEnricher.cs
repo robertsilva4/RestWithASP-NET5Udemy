@@ -30,14 +30,14 @@ namespace RestWithASPNETUdemy.Hypermedia
             }
             return false;
         }
-        public async Task Enrich(ResultExecutingContext response)
+        public Task Enrich(ResultExecutingContext response)
         {
             var urlHelper = new UrlHelperFactory().GetUrlHelper(response);
             if (response.Result is OkObjectResult okObjectResult)
             {
                 if (okObjectResult.Value is T model)
                 {
-                    await EnrichModel(model, urlHelper);
+                    return EnrichModel(model, urlHelper);
                 }
                 else if (okObjectResult.Value is List<T> collection)
                 {
@@ -48,7 +48,7 @@ namespace RestWithASPNETUdemy.Hypermedia
                     });
                 }
             }
-            await Task.FromResult<object>(null);
+            return Task.FromResult<object>(null);
         }
     }
 }
