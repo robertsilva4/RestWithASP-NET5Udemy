@@ -95,10 +95,10 @@ namespace RestWithASPNETUdemy
             var connection = Configuration["MySQLConnection:MySQLConnectionstring"];
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
 
-           if (Environment.IsDevelopment())
-           {
-                MigrateDatabase(connection);
-           }
+           //if (Environment.IsDevelopment())
+           //{
+           //     MigrateDatabase(connection);
+           //}
 
             services.AddMvc(options =>
             {
