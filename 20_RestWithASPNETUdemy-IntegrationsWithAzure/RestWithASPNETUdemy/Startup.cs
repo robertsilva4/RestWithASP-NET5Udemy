@@ -123,7 +123,7 @@ namespace RestWithASPNETUdemy
                 c.SwaggerDoc("v1",
                     new OpenApiInfo 
                     {
-                        Title = "REST API's From 0 to Azure with ASP.NET core 5 and Docker",
+                        Title = "REST API's From 0 to Azure with ASP.NET core 5 and Docker - Full Bar",
                         Version = "v1",
                         Description = "API RESTful developed in course 'REST API's From 0 to Azure with ASP.NET core 5 and Docker'",
                         Contact = new OpenApiContact
